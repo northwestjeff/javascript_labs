@@ -1,0 +1,54 @@
+body {
+  display: flex;
+  background-color: #aaca67;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+    h1 {
+      //color: white;
+      width: auto;
+      align-items: center;
+    }
+      h4 {
+      margin: 0;
+      //color: white;
+    }
+}
+
+.header {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 10%;
+}
+
+.highScore {
+  margin-top: 15px;
+}
+
+
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  //background-color: #00A6A6;
+  width: 413px;
+  height: auto;
+  flex-wrap: wrap;
+  margin-right: 10%;
+  margin-top: 5%;
+}
+
+.tile {
+  display: flex;
+  background-image: url(hole.jpg);
+  width: 103px;
+  height: 84px;
+  justify-content: space-between;
+  align-self: center;
+  flex-wrap: wrap;
+
+}

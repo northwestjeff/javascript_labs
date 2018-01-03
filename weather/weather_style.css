@@ -1,0 +1,70 @@
+body {
+  display: block;
+  margin: 0;
+  font-family: 'Amatic SC', cursive; }
+
+.main {
+  display: flex;
+  background-color: #9c27b0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-content: center;
+  height: 800px; }
+  .main .weather {
+    display: flex;
+    width: 66%;
+    position: fixed;
+    background-color: rgba(33, 33, 33, 0.5);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    flex-direction: column;
+    align-content: center;
+    margin: 50px 0; }
+    .main .weather #city {
+      font-size: 6em;
+      display: flex;
+      justify-content: center;
+      color: white;
+      margin: 15px 0; }
+    .main .weather .details {
+      font-size: 1.5em;
+      display: flex;
+      color: white;
+      flex-direction: column;
+      justify-content: space-between;
+      list-style: none;
+      padding-left: 0;
+      margin: 15px 15px;
+      flex-wrap: wrap;
+      align-items: center; }
+      .main .weather .details .datapoint {
+        display: flex;
+        justify-content: space-around;
+        background-color: rgba(33, 33, 33, 0.3);
+        width: 40%;
+        padding: 2%;
+        border-radius: 5px;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 10px; }
+  .main .search-section {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .main .search-section #search {
+      display: flex;
+      flex-direction: column; }
+      .main .search-section #search #city-search {
+        margin-bottom: 5px;
+        color: #ababab; }
+
+.search {
+  display: flex;
+  justify-content: center; }
+
+/*# sourceMappingURL=weather_style.css.map */

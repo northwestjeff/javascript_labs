@@ -1,0 +1,43 @@
+body {
+  display: flex;
+  background-color: #aaca67;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row; }
+  body h1 {
+    width: auto;
+    align-items: center; }
+  body h4 {
+    margin: 0; }
+
+.header {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 10%; }
+
+.highScore {
+  margin-top: 15px; }
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 413px;
+  height: auto;
+  flex-wrap: wrap;
+  margin-right: 10%;
+  margin-top: 5%; }
+
+.tile {
+  display: flex;
+  background-image: url(hole.jpg);
+  width: 103px;
+  height: 84px;
+  justify-content: space-between;
+  align-self: center;
+  flex-wrap: wrap; }
+
+/*# sourceMappingURL=whack-a-mole.css.map */

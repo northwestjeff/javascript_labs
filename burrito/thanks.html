@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>El Burrito Grande Order Confirmation</title>
+    <link href="https://fonts.googleapis.com/css?family=Atma:700" rel="stylesheet">
+    <link rel="stylesheet" href="css/semantic.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header class="ui fixed menu">
+    <h1>El Burrito Grande Order Confirmation</h1>
+</header>
+<section class="ui grid">
+    <section class="four wide column upsell">
+        <figure class="ui raised segment">
+            <img class="ui medium rounded image"
+                 src="http://assets.kraftfoods.com/recipe_images/opendeploy/113694_640x428.jpg" alt="">
+            <figcaption>Thanks for your order!</figcaption>
+        </figure>
+    </section>
+    <section class="eight wide column">
+        <h2>Your Order</h2>
+        <p>Your burrito is being made as we speak. See below for details of your order.</p>
+        <h3 class="ui block header">Your Burrito’s Details</h3>
+        <div id="order-details">
+            <h4>Loading your order details…</h4>
+        </div>
+    </section>
+    <section class="four wide column"></section>
+</section>
+<div class="ui divider"></div>
+<footer>
+    <p>Copywrong <span id="copywrong">&copy;</span> 2016. No rights reserved.</p>
+</footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="js/semantic.js"></script>
+<script>
+    var uriBlock = location.search.substring(1);
+    var uriSplit = uriBlock.split("&");
+    var orderDetails = $('#order-details')
+    var uriValues = [];
+    var uriPrint = [];
+    for (i = 0; i < uriSplit.length; i++) {
+            uriValues.push(uriSplit[i].split('=')[1])
+        }
+
+    var niceDict = {
+        "white": "White Tortilla",
+        "wheat": "Wheat Tortilla",
+        "spinach": "Spinach Tortilla",
+        "carnitas": "Carnitas",
+        "beans": "Beans",
+        "salsa": "Salsa",
+        "cheese": "Cheese",
+        "sour+cream": "Sour Cream",
+        "sauteed-mushrooms": "Sauteed Mushrooms",
+        "sauteed-onions": "Sauteed Onions",
+        "guacamole": "Guacamole",
+        "chicken": "Chicken",
+        "sofritas": "Sofritas",
+        "scrambled-eggs": "Scrambled Eggs",
+        "corn": "Corn Tortillas",
+        "sun-dried-tomatoes": "Sun Dried Tomatoes",
+        "olives": "Olives",
+        "jalapeno": "Jalapeños"
+    }
+
+    orderDetails.empty()
+    for (i = 0; i < uriValues.length; i++) {
+        uriPrint.push(niceDict[uriValues[i]])
+    }
+
+   uriPrint = uriPrint.filter(function(n){ return n != undefined });
+
+//     for (i = 0; i < uriPrint.length; i++) {
+//        if (typeof uriPrint[i] === "undefined") {
+////            console.log(uriPrint[i] + "undefined" + i)
+//            uriPrint.splice(i, 1)
+//        } else {
+//        }
+//    }
+//    console.log(uriPrint)
+
+    for (i = 0; i < uriPrint.length; i++) {
+        orderDetails.append("<li>" + uriPrint[i]+ "</li>")
+    }
+
+//    orderDetails.empty()
+//    orderDetails.append("<li>" + uriPrint[8]+ "</li>")
+
+
+</script>
+</body>
+</html>

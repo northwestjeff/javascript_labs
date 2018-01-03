@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Library Shelf</title>
+    <link rel="stylesheet" href="bookstyle.css">
+</head>
+<body>
+
+<div class="header">
+    <h1>My Library</h1>
+    <div>
+        <input id="new-book-button" type="button" value="Add a New Book">
+    </div>
+</div>
+
+<div class="form">
+    <form id="new-book-form">
+        <fieldset>
+            Title: <input type="text" name="title" value="Title"><br>
+            Author: <input type="text" name="author" value="Author"><br>
+            # Pages: <input type="text" name="pages" value="Number of Pages"><br>
+            Check if you've read it: <input type="checkbox" name="read" value="Read it yet?">
+            <input type="submit" name="newbook" value="submit" id="new-submit">
+        </fieldset>
+    </form>
+</div>
+
+
+<div id="shelf">
+
+</div>
+
+<br>
+<div id="main">
+
+</div>
+
+<script src="book.js"></script>
+</body>
+</html>

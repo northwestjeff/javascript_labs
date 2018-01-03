@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,KAAM;EACJ,KAAK,EAAE,GAAG;EACV,WAAW,EAAE,IAAI;EACjB,YAAY,EAAE,IAAI;EAClB,MAAM,EAAE,cAAc;;AAGxB,YAAa;EACX,UAAU,EAAE,MAAM",
+"sources": ["to_do_style.scss"],
+"names": [],
+"file": "to_do_style.css"
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Data</title>
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="weather_style.css">
+</head>
+
+
+<body>
+    <div class="main">
+        <div class="weather">
+            <h2 id="city">CITY</h2>
+            <ul class="details">
+                <li class="datapoint" id="temp">temp</li>
+                <li class="datapoint"  id="wind">wind</li>
+                <li class="datapoint"  id="prec"></li>
+                <!--<li class="datapoint"  id="cloud">cloud</li>-->
+            </ul>
+        <div class="search-section">
+            <form id="search" action="" method="get">
+                <input type="text" name="city-search" id="city-search">
+                <button type="submit" value="Submit">submit</button>
+            </form>
+        </div>
+        </div>
+
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="weather_main.js"></script>
+</body>
+</html>
