@@ -18,20 +18,18 @@ var thecircle = new Book("The Circle", "Miller", 120, false);
 function addBookToLibrary(book) {
     myLibrary.push(book)
 }
-// myLibrary.push(learn, gonegirl, thecircle);
+
 addBookToLibrary(learn);
 addBookToLibrary(gonegirl);
 addBookToLibrary(thecircle);
 
-function addBookSection(newBook) {
+function addBookSection() {
     const buttonClick = document.getElementById('new-book-button')
     buttonClick.addEventListener('click', function () {
-        console.log('new book button clicked');
         const newBookSection = document.getElementById('new-book-form')
         newBookSection.style.display = 'block';
     })
 }
-
 
 // SUBMIT NEW BOOK TO SHELF
 const form = document.querySelector('#new-book-form');
@@ -46,7 +44,7 @@ form.onsubmit = function (e) {
         form.read.value
     ));
     const shelf = document.getElementById("shelf");
-    shelf.innerHTML = "" //DELETES SHELF CONTENTS
+    shelf.innerHTML = ""; //DELETES SHELF CONTENTS
     render(myLibrary) //RENDERS SHELF CONTENTS
 };
 
@@ -98,40 +96,30 @@ function render(array) {
         }
         const removeButton = document.createElement('input');
         removeButton.className = 'remove-button';
-        // removeButton.id = 'remove-button';
         removeButton.type = 'button';
         removeButton.value = "Remove Book from Shelf";
         book.appendChild(removeButton);
     }
 }
 
-function removeClick() {
-    const button = document.getElementsByClassName('remove-button');
-    for (i = 0; i < button.length; i++) {
-        button[i].addEventListener('click', function () {
-            console.log(this.parentElement.style.display = 'none')
-                // button[i].parentElement.style.display = 'none'
-            }
-            , false);
-    }
-// This should get the index number of the book and then remove that from the library
-}
-
-function newBook() {
-    const button = document.getElementById('new-book');
-    button.prompt("Please Enter Book Details:")
-
-}
-
-
-// NEW BOOK button that pops up a form
-// Add event listener to 'Mark Read!' button to change the .read to true
-// add a button to remove from library
-//
-
 
 render(myLibrary);
-removeClick();
+removeBook()
 addBookSection();
+
+function removeBook() {
+    const button = document.querySelectorAll('.remove-button');
+    for (i = 0; i < button.length; i++) {
+        button[i].addEventListener('click', function () {
+            var indexNum = this.parentNode.id
+            myLibrary.splice(indexNum, 1)
+            const shelf = document.getElementById("shelf");
+            shelf.innerHTML = ""; //DELETES SHELF CONTENTS
+            render(myLibrary) //RENDERS SHELF CONTENTS
+
+        })
+    }
+}
+
 
 // newBookSubmission();
