@@ -23,34 +23,9 @@ addBookToLibrary(learn);
 addBookToLibrary(gonegirl);
 addBookToLibrary(thecircle);
 
-function addBookSection() {
-    const buttonClick = document.getElementById('new-book-button')
-    buttonClick.addEventListener('click', function () {
-        const newBookSection = document.getElementById('new-book-form')
-        newBookSection.style.display = 'block';
-    })
-}
-
-// SUBMIT NEW BOOK TO SHELF
-const form = document.querySelector('#new-book-form');
-form.onsubmit = function (e) {
-    e.preventDefault();
-    console.log(form.title.value);
-    // INSTANTIATES BOOK OBJECT WITH FORM VALUES PASSED-IN
-    addBookToLibrary(new Book(
-        form.title.value,
-        form.author.value,
-        form.pages.value,
-        form.read.value
-    ));
-    const shelf = document.getElementById("shelf");
-    shelf.innerHTML = ""; //DELETES SHELF CONTENTS
-    render(myLibrary) //RENDERS SHELF CONTENTS
-};
-
-
 // RENDERS BOOK OBJECTS TO SHELF
 function render(array) {
+    addBookSection();
     for (i = 0; i < myLibrary.length; i++) {
 
         // CREATES BOOK
@@ -100,12 +75,13 @@ function render(array) {
         removeButton.value = "Remove Book from Shelf";
         book.appendChild(removeButton);
     }
+    removeBook();
+
 }
 
 
 render(myLibrary);
-removeBook()
-addBookSection();
+
 
 function removeBook() {
     const button = document.querySelectorAll('.remove-button');
@@ -120,6 +96,29 @@ function removeBook() {
         })
     }
 }
+// SUBMIT NEW BOOK TO SHELF
+const form = document.querySelector('#new-book-form');
+form.onsubmit = function (e) {
+    e.preventDefault();
+    console.log(form.title.value);
+    // INSTANTIATES BOOK OBJECT WITH FORM VALUES PASSED-IN
+    addBookToLibrary(new Book(
+        form.title.value,
+        form.author.value,
+        form.pages.value,
+        form.read.value
+    ));
+    const shelf = document.getElementById("shelf");
+    shelf.innerHTML = ""; //DELETES SHELF CONTENTS
+    render(myLibrary) //RENDERS SHELF CONTENTS
+};
 
+function addBookSection() {
+    const buttonClick = document.getElementById('new-book-button')
+    buttonClick.addEventListener('click', function () {
+        const newBookSection = document.getElementById('new-book-form')
+        newBookSection.style.display = 'block';
+    })
+}
 
 // newBookSubmission();
