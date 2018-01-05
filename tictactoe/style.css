@@ -1,0 +1,18 @@
+.header {
+  background-color: #0d71bb;
+  color: white;
+  border: dotted 1px floralwhite; }
+
+#new-book-button {
+  margin-bottom: 10px; }
+
+#new-book-form {
+  display: none; }
+
+.book {
+  border: 1px black solid; }
+
+.title {
+  text-decoration: underline; }
+
+/*# sourceMappingURL=bookstyle.css.map */
