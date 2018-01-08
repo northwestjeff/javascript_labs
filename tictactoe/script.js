@@ -20,3 +20,20 @@
 function gameBoard(cols, row) {
     for (i=0; i<cols)
 }
+
+
+
+// Player
+    //turn
+    //letter (o or x)
+
+//board
+    //squares
+    //input letter (method)
+
+//Game
+    // whose turn
+    // win check
+    // restart button
+    // who goes first
+    
